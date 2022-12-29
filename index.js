@@ -15,7 +15,8 @@ app.use(express.json());
 const mongoUrl = " ";
 const client = new MongoClient(mongoUrl);
 
-async function dbConnected() {
+
+async function dbConnecte() {
   try {
     await client.connect();
     console.log('database connected'.yellow.italic);
@@ -25,14 +26,15 @@ async function dbConnected() {
    
   }
 };
-dbConnected();
+dbConnecte();
 
 // database and collection create
 
 
 // END POINT
-app.post('/product', async (res, req) => {
+app.post('/', async (res, req) => {
 
 });
 
+// 3RD PART
 app.listen(port, () => console.log(('server up and running'.magenta.italic)));
