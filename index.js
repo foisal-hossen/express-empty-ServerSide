@@ -1,9 +1,10 @@
 // 1ST PART
 const express = require("express");
 const cors = require('cors');
-const {MongoClient} = require('mongodb'); //Mongodb
-const colors = require('colors');
 const app = express();
+const { MongoClient, ServerApiVersion } = require('mongodb'); //Mongodb
+const dotenv = require('dotenv').config();
+const colors = require('colors');
 const port = process.env.PORT || 5000;
 
 
@@ -13,10 +14,14 @@ app.use(express.json());
 
 // 2ND PART (mongoDB Connect)
 const mongoUrl = " ";
-const client = new MongoClient(mongoUrl);
+const client = new MongoClient(mongoUrl, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  serverApi: ServerApiVersion.v1
+});
 
 
-async function dbConnecte() {
+async function dbConnect() {
   try {
     await client.connect();
     console.log('database connected'.yellow.italic);
@@ -26,7 +31,7 @@ async function dbConnecte() {
    
   }
 };
-dbConnecte();
+dbConnect();
 
 // database and collection create
 

@@ -1,0 +1,14 @@
+1.vercel.json - create ;
+2."build": "node index.js", - package.json > script > add ;
+3.command in terminal - vercel ;
+4.Every time after that you have to write ' vercel deploy ' to deploy.
+
+
+installed pakages:
+colors 
+cors 
+express
+mongodb
+nodemon
+dotenv 
+jwt

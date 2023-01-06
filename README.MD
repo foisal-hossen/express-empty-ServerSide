@@ -1,6 +1,5 @@
 > ## quick express
 ```bash
-cd Desktop
 git clone https://github.com/foisal-hossen/express-empty-ServerSide.git
 cd express-empty-ServerSide
 rm -fr .git
