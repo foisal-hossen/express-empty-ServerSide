@@ -5,7 +5,6 @@ cd express-empty-ServerSide
 rm -fr .git
 npm i
 code .
-npm start
 
 ```
 > ## USEGE ELEMENTS:
